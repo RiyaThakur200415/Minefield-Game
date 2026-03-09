@@ -1,50 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>The Minefield: Audit & Reveal</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>The Minefield: Demo</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div id="main-interface" class="war-room">
-        <header class="hud">
-            <div class="status-indicators">
-                <span class="pulse"></span> SYSTEM: ACTIVE (gVisor)
-                <span id="chance-counter">ATTEMPTS REMAINING: 5</span>
-            </div>
-            <h1>INTERNAL MINEFIELD</h1>
-            <p>Active Defense: Shifting 50 AI-Honeypots to neutralize lateral movement.</p>
-        </header>
 
-        <main class="grid-layout">
-            <!-- Even distribution of 51 assets -->
-            <section id="node-grid"></section>
+<div id="main-interface" class="war-room">
 
-            <!-- Layer 4 Monitoring Pipeline -->
-            <aside class="watcher-feed">
-                <h3>SURVEILLANCE FEED (ELK)</h3>
-                <div id="log-content">> Monitoring for Indicators of Compromise...</div>
-            </aside>
-        </main>
-    </div>
+<header class="hud">
 
-    <!-- The Alarm Overlay (Trap and Block Mechanism) -->
-    <div id="alarm-overlay" class="hidden">
-        <div class="alarm-card">
-            <h1 class="glitch">!! HACKER DETECTED !!</h1>
-            <div class="alert-bar">THREAT LEVEL: CRITICAL</div>
-            <p id="alarm-msg"></p>
-            <h2 class="denied">ACCESS DENIED</h2>
-            <div class="code-block">> iptables -A INPUT -s INTRUDER_IP -j DROP</div>
-            
-            <div class="btn-group">
-                <button onclick="location.reload()">RE-START SESSION</button>
-                <!-- Hidden button that triggers the reveal -->
-                <button id="reveal-btn" class="hidden" onclick="auditReveal()">AUDIT: REVEAL REAL SERVER</button>
-            </div>
-        </div>
-    </div>
+<div class="status-indicators">
+SYSTEM: ACTIVE
+<span id="chance-counter">ATTEMPTS REMAINING: 5</span>
+</div>
 
-    <script src="script.js"></script>
+<h1>CYBER DECEPTION MINEFIELD</h1>
+
+<p>
+Find the real <b>Production Server</b>.  
+Most files are fake honeypots designed to detect attackers.
+</p>
+
+</header>
+
+
+<main class="grid-layout">
+
+<section id="node-grid"></section>
+
+<aside class="watcher-feed">
+
+<h3>SECURITY MONITOR</h3>
+
+<div id="log-content">
+> Monitoring for suspicious activity...
+</div>
+
+</aside>
+
+</main>
+
+</div>
+
+
+<div id="alarm-overlay" class="hidden">
+
+<div class="alarm-card">
+
+<h1 class="glitch">ALERT</h1>
+
+<div class="alert-bar">SECURITY EVENT</div>
+
+<p id="alarm-msg"></p>
+
+<h2 class="denied">ACCESS BLOCKED</h2>
+
+<div class="btn-group">
+
+<button onclick="location.reload()">RESTART</button>
+
+<button id="reveal-btn" class="hidden" onclick="auditReveal()">
+REVEAL REAL SERVER
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
