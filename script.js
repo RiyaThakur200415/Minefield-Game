@@ -124,9 +124,8 @@ chanceDisplay.innerText=`ATTEMPTS REMAINING: ${attemptsRemaining}`;
 
 alert("Trap Triggered! This was a honeypot.");
 
-log.innerHTML=
-`<p style="color:red;">> Trap triggered on ${asset.label}</p>`+
-log.innerHTML;
+log.innerHTML =
+`<p style="color:red;">> Trap triggered on ${asset.label}</p>` + log.innerHTML;
 
 if(attemptsRemaining<=0){
 
@@ -134,6 +133,11 @@ triggerTrap(
 "HACKER DETECTED",
 "Too many traps triggered."
 );
+
+}
+else{
+
+shuffleNodes();   
 
 }
 
@@ -183,5 +187,12 @@ node.innerText="REAL SERVER";
 log.innerHTML=
 `<p style="color:var(--blue);">> Audit complete. Real server identified.</p>`
 + log.innerHTML;
+
+}
+function shuffleNodes(){
+
+assetList.sort(()=>Math.random()-0.5);
+
+renderGrid();
 
 }
