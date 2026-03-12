@@ -9,7 +9,21 @@
 
 <body>
 
-<div id="main-interface" class="war-room">
+<!-- START SCREEN -->
+<div id="start-screen">
+
+<h1>CYBER DECEPTION MINEFIELD</h1>
+
+<p>
+Find the real <b>Production Server</b> while avoiding honeypots.
+</p>
+
+<button id="start-btn">START MISSION</button>
+
+</div>
+
+<!-- GAME INTERFACE -->
+<div id="main-interface" class="war-room hidden">
 
 <header class="hud">
 
@@ -26,7 +40,6 @@ Most files are fake honeypots designed to detect attackers.
 </p>
 
 </header>
-
 
 <main class="grid-layout">
 
@@ -46,7 +59,7 @@ Most files are fake honeypots designed to detect attackers.
 
 </div>
 
-
+<!-- ALERT SCREEN -->
 <div id="alarm-overlay" class="hidden">
 
 <div class="alarm-card">
